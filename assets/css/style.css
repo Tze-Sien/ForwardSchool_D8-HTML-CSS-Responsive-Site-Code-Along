@@ -1,0 +1,371 @@
+/* Setup */
+:root {
+    --primary: #F4623A;
+    --secondary: #F24516;
+    --l-grey: #6c757d;
+    --d-grey: #343A40;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "MerriWeather", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "MerriWeather Sans", sans-serif;
+    
+}
+
+/* Element Preset */
+.btn {
+    display: inline-block;
+    padding: 1.25rem 2.25rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10rem;
+    text-decoration: none;
+}
+
+.btn-orange {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-white {
+    background-color: white;
+    color: black;
+}
+
+.icon-orange {
+    color: var(--primary);
+}
+
+.icon-grey {
+    color: var(--d-grey);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+[class*="col-"] {
+    width: 100%;
+    padding: 0 15px;
+    position: relative;
+}
+
+.divider {
+    width: 3.25rem;
+    margin: 1.5rem auto;
+    border-width: 0.2rem;
+    border-top: none;
+}
+
+.divider-o {
+    border-color: var(--primary);
+}
+
+.divider-w {
+    border-color: white;
+}
+
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+
+
+/* NavBar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    padding: 2rem;
+    
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0px 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--l-grey);
+    font-size: 1.25rem;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+nav .nav-brand {
+    color: var(--l-grey);
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+/* Header */
+header {
+    background: linear-gradient( to bottom, 
+    rgba(92, 77, 66, 0.8) 0%, 
+    rgba(92, 77, 66, 0.8) 100% ),
+    url("../img/banner-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top:10rem;
+    padding-bottom: 5.5rem;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+header p {
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.get-started {
+    padding: 8rem 0;
+    background-color: var(--primary);
+}
+
+.get-started .row {
+    justify-content: center;
+}
+
+.get-started .col-lg-8 {
+    color: white;
+    text-align: center;
+}
+
+.get-started .col-lg-8 p {
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 1.5rem;
+}
+
+.services {
+    padding: 8rem 0;
+    text-align: center;
+}
+
+.services h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.services .fa {
+    margin-top: 1rem;
+}
+
+.projects .box {
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+
+.projects img {
+    max-width: 100%;
+    height: auto;
+}
+
+.projects .box {
+    line-height: 0;
+}
+
+.projects .box .caption {
+    color: white;
+    background: rgba(244, 98, 58, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    bottom:0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.projects .box:hover .caption {
+    opacity: 1;
+
+    line-height: 1rem;
+    
+}
+
+.projects .container {
+    padding: 0;
+    max-width: 1920px;
+}
+
+.projects .container .row {
+    margin: 0;
+}
+
+.projects .container .row [class*="col-"] {
+    padding: 0px;
+}
+
+.download {
+    padding: 8rem 0;
+    background-color: var(--d-grey);
+    color: white;
+    text-align: center;
+}
+
+.download h2 {
+    margin-bottom: 1.5rem;
+} 
+
+.contact {
+    padding: 8rem 0;
+}
+
+.contact #row1 {
+    justify-content: center;
+    text-align: center;
+}
+
+.contact #row1 p {
+    margin-bottom: 3rem;
+}
+
+.contact #row2 {
+    text-align: center;
+}
+
+.contact #row2 a {
+    color: var(--primary);
+    display: block;
+}
+
+.contact #row2 .col-lg-4:first-child {
+    margin-left: auto;
+}
+
+.contact #row2 .col-lg-4:last-child {
+    margin-right: auto;
+}
+
+
+.contact #row2 .fa {
+    margin-bottom: 1rem;
+}
+
+
+
+/* Footer */
+footer {
+    color: #6c757d;
+    background-color: #F8F9FA;
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+/* Media-query */
+@media (min-width: 576px) {
+    /* For Mobile or Small Screen */
+    .col-sm-1  {width: 8.33%;}
+    .col-sm-2  {width: 16.66%;}
+    .col-sm-3  {width: 25%;}
+    .col-sm-4  {width: 33.33%;}
+    .col-sm-5  {width: 41.66%;}
+    .col-sm-6  {width: 50%;}
+    .col-sm-7  {width: 58.33%;}
+    .col-sm-8  {width: 66.66%;}
+    .col-sm-9  {width: 75%;}
+    .col-sm-10 {width: 83.33%;}
+    .col-sm-11 {width: 91.66%;}
+    .col-sm-12 {width: 100%;}
+
+    .container {
+        max-width: 540px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    /* Tablet */
+    .col-md-1  {width: 8.33%;}
+    .col-md-2  {width: 16.66%;}
+    .col-md-3  {width: 25%;}
+    .col-md-4  {width: 33.33%;}
+    .col-md-5  {width: 41.66%;}
+    .col-md-6  {width: 50%;}
+    .col-md-7  {width: 58.33%;}
+    .col-md-8  {width: 66.66%;}
+    .col-md-9  {width: 75%;}
+    .col-md-10 {width: 83.33%;}
+    .col-md-11 {width: 91.66%;}
+    .col-md-12 {width: 100%;}
+
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Desktop */
+    .col-lg-1  {width: 8.33%;}
+    .col-lg-2  {width: 16.66%;}
+    .col-lg-3  {width: 25%;}
+    .col-lg-4  {width: 33.33%;}
+    .col-lg-5  {width: 41.66%;}
+    .col-lg-6  {width: 50%;}
+    .col-lg-7  {width: 58.33%;}
+    .col-lg-8  {width: 66.66%;}
+    .col-lg-9  {width: 75%;}
+    .col-lg-10 {width: 83.33%;}
+    .col-lg-11 {width: 91.66%;}
+    .col-lg-12 {width: 100%;}
+
+    .container {
+        max-width: 960px;
+    }
+
+    header {
+        height: 100vh;
+        min-height: 40rem;
+        padding-top: 4.5rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+
+
+
+
+
